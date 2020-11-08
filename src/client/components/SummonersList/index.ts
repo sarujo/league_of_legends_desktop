@@ -1,0 +1,1 @@
+export { SummonersList } from './SummonersList';

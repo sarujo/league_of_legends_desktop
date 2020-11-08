@@ -1,0 +1,57 @@
+{
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended",
+    "react-app"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "unused-imports"],
+  "rules": {
+    "comma-spacing": "error",
+    "eqeqeq": "error",
+    "import/no-cycle": "error",
+    "import/no-self-import": "error",
+    "import/order": "error",
+    "padding-line-between-statements": [
+      "error",
+      { "blankLine": "always", "prev": "*", "next": "return" },
+      {
+        "blankLine": "always",
+        "prev": ["const", "let"],
+        "next": ["if", "for", "while", "do", "try", "function"]
+      },
+      {
+        "blankLine": "always",
+        "prev": ["if", "for", "while", "do", "try", "function"],
+        "next": ["const", "let"]
+      },
+      {
+        "blankLine": "always",
+        "prev": ["if", "for", "while", "do", "try", "function"],
+        "next": ["if", "for", "while", "do", "try", "function"]
+      }
+    ],
+    "no-nested-ternary": "error",
+    "no-else-return": "error",
+    "no-trailing-spaces": "error",
+    "react/button-has-type": "error",
+    "spaced-comment": "error",
+    "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
+    "@typescript-eslint/ban-types": "warn",
+    "@typescript-eslint/no-empty-interface": "warn",
+    "@typescript-eslint/no-inferrable-types": "warn",
+    "no-console": "warn",
+    "unused-imports/no-unused-vars": "warn",
+    "unused-imports/no-unused-imports": "warn",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "import/no-unresolved": "off",
+    "no-unused-expressions": "off",
+    "no-empty-function": "off",
+    "react/static-property-placement": "off"
+  },
+  "reportUnusedDisableDirectives": true
+}
